@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: e-jotter-deployment
+  name: e-jotter-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: e-jotter-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: e-jotter-deployment
+    spec:
+      containers:
+      - image: prajwal3498/e-jot:latest
+        name: e-jotter-test
+        resources: {}
+status: {}
